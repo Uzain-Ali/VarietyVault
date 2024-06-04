@@ -23,3 +23,6 @@ It's a fully functioned ecommerce website.
 
 # Model JOINS
 ![alt text](image-1.png)
+
+# Note
+You have to put your client id  under checkout and also total_amount 

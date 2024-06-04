@@ -15,6 +15,11 @@ urlpatterns = [
     path('add-to-cart/', views.add_to_cart, name='add-to-cart'),
     path('cart/', views.showCart, name='show-cart'),
 
+    path('pluscart/', views.plus_cart),
+    path('minuscart/', views.minus_cart),
+
+    path('removecart/', views.remove_cart),
+
 
     path('buy/', views.buy_now, name='buy-now'),
     path('profile/', views.ProfileView.as_view(), name='profile'),
@@ -40,7 +45,9 @@ urlpatterns = [
 
 # Authentication URLs
     path('accounts/login/', auth_views.LoginView.as_view(template_name='app/login.html', authentication_form=LoginForm), name='login'),
-    path('logout/', auth_views.LogoutView.as_view(next_page='login'), name='logout'),
+    
+    # path('logout/', auth_views.LogoutView.as_view(next_page='login'), name='logout'),
+     path('logout/', views.CustomLogoutView.as_view(), name='logout'),
 
     path('passwordchange/', auth_views.PasswordChangeView.as_view(template_name="app/passwordchange.html", form_class=ChangePasswordForm, success_url='/passwordchanged/'), name='passwordchange'),
 
@@ -55,6 +62,11 @@ urlpatterns = [
     path('password-reset-complete/', auth_views.PasswordResetCompleteView.as_view(template_name='app/password-reset-complete.html'), name='password_reset_complete'),
 
     path('registration/', views.CustomerRegistrationView.as_view(), name='customerregistration'),
-    path('checkout/', views.checkout, name='checkout')
+
+
+
+# Place Order URLs
+    path('checkout/', views.checkout, name='checkout'),
+    path('paymentdone/', views.payment_done, name='paymentdone')
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -109,6 +109,9 @@ class Cart(models.Model):
 
     def __str__(self):
         return str(self.id)
+    @property
+    def total_cost(self):
+        return self.quantity * self.product.discounted_price
     
 
 class OrderPlaced(models.Model):
@@ -121,3 +124,7 @@ class OrderPlaced(models.Model):
 
     class Meta:
         db_table = "orderplaced"
+    
+    @property
+    def total_cost(self):
+        return self.quantity * self.product.discounted_price
