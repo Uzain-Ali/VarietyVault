@@ -4,17 +4,21 @@
 
 {% block banner_slider %}
 <!--Banner Slider-->
- <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="{% static 'app/images/banner/b3.png' %}" height="500" class="d-block w-100" alt="..."> 
-      <a href="" class="btn btn-warning">Shop Now</a>
+    <div class="carousel-item active position-relative">
+      <img src="{% static 'app/images/banner/b3.png' %}" height="500" class="d-block w-100" alt="...">
+      <a href="" class="btn btn-warning shop-now-button border border-danger btn-lg">Shop Now!</a>
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item position-relative">
       <img src="{% static 'app/images/banner/b2.png' %}" height="500" class="d-block w-100" alt="...">
+      <a href="{% url 'laptop' %}" class="btn btn-dark shop-now-button1 border border-danger btn-lg">Shop Now!</a>
+
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item position-relative">
       <img src="{% static 'app/images/banner/b1.png' %}" height="500" class="d-block w-100" alt="...">
+      <a href="{% url 'mobile' %}" class="btn btn-dark shop-now-button2 border border-danger btn-lg">Shop Now!</a>
+
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
@@ -26,6 +30,7 @@
     <span class="visually-hidden">Next</span>
   </a>
 </div>
+
 <!-- End Banner Slider -->
 {% endblock banner_slider %}
 

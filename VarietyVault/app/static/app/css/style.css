@@ -19,3 +19,33 @@
  font-size: 24px;
  font-weight: bold;
 }
+
+
+.carousel-item {
+    position: relative;
+  }
+  
+  .shop-now-button {
+    position: absolute;
+    top: 71.5%; 
+    left: 57.2%; 
+    transform: translate(-50%, -50%); 
+    z-index: 10; 
+    width: 225px;
+  }
+  .shop-now-button1 {
+    position: absolute;
+    top: 40%; 
+    left: 25%; 
+    transform: translate(-50%, -50%); 
+    z-index: 10; 
+    width: 225px;
+  }
+  .shop-now-button2 {
+    position: absolute;
+    top: 40%; 
+    left: 30%; 
+    transform: translate(-50%, -50%); 
+    z-index: 10; 
+    width: 225px;
+  }
