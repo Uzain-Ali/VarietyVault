@@ -36,9 +36,8 @@
           <div class="form-check mt-2 ">
           </div>
         {% endfor %}
-        <button type="button" class="btn btn-primary mt-3 px-5 fw-bold razorPay btn-lg w-100">Pay with RazorPay</button>
-
-        <div class="text-end my-3">
+        <div class="text-end">
+          <!-- <button type="submit" class="btn btn-warning mt-3 px-5 fw-bold">Continue</button> -->
           <!-- Set up a container element for the button -->
            <div id="paypal-button-container"></div>
         </div>
@@ -111,7 +110,3 @@
   </script>
 
 {% endblock payment-gateway %}
-
-{% block scripts %}
-<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-{% endblock scripts %}
